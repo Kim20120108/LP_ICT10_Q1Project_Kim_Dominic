@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU Generator - El Yohan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body { background-color: #ffc0ec; color: #ffffff; }
+        .card { background-color: #ffffff; color: #000000; border-radius: 12px; }
+        .card-header { background: linear-gradient(135deg, #7722ff, #7209b7); color: white; }
+    </style>
+</head>
+<body>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand fw-bold" href="#">El Yohan</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="sku.html">SKU Generator</a>
+            <a class="nav-link" href="index.html">Receipt Generator</a>
+        </div>
+    </nav>
+
+    <!--Container-->
+    <div class="container my-5 d-flex justify-content-center">
+        <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+            <div class="card-header text-center py-3 rounded">
+                <h4>SKU Generator</h4>
+                <small class="fs-6">Drinks, Doohickeys, and Specials</small>
+            </div>
+            <div class="card-body">
+                
+                <!--Category-->
+                <div class="mb-3">
+                    <label for="category" class="form-label fw-bold">Category</label>
+                    <select id="category" class="form-select">
+                        <option value="Drinks & Doohickeys">Drinks & Doohickeys</option>
+                        <option value="Side Dishes">Side Dishes</option>
+                        <option value="Premium Add-Ons">Premium Add-Ons</option>
+                        <option value="Entrep Fair Specials">Entrep Fair Specials</option>
+                    </select>
+                </div>
+
+                <!--Product Name-->
+                <div class="mb-3">
+                    <label for="product_name" class="form-label fw-bold">Product Name</label>
+                    <input type="text" id="product_name" class="form-control" list="product-options" placeholder="e.g. Air Pro Max or Jar of Pickles">
+                    <datalist id="product-options">
+                        <option value="Americano + Jar of Pickles">
+                        <option value="Spanish Latte + iPhone Case">
+                        <option value="Cold Brew + Kodak Camera">
+                        <option value="Dirty Matcha + Expired Library Card">
+                        <option value="Two Pencils">
+                        <option value="Borrowed Ballpen">
+                        <option value="Half Eaten Sisig from Bistro">
+                        <option value="WiFi Password">
+                        <option value="Teacher's Approval">
+                        <option value="Extra 0.25 GWA">
+                        <option value="Homework Extension">
+                        <option value="Can I Go Home Early Pass">
+                        <option value="Mystery Box">
+                        <option value="Air (Pro Max)">
+                    </datalist>
+                </div>
+
+                <!--Quantity-->
+                <div class="mb-3">
+                    <label for="quantity" class="form-label fw-bold">Stock Quantity</label>
+                    <input type="number" id="quantity" class="form-control" placeholder="e.g. 50" min="1" value="10">
+                </div>
+
+                <button class="btn btn-primary w-100 py-2 fw-bold" py-click="SKU_generator">Generate SKU</button>
+
+                <div id="sku_output" class="mt-4 text-center fw-bold fs-5 text-primary">
+                    <p class="text-muted fw-normal fs-6">Your generated SKU will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PyScript Link-->
+    <script type="py" src="./main.py" config='{"packages": []}'></script>
+
+</body>
+</html>

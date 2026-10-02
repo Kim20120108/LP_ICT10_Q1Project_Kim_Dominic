@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generator - El Yohan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body { background-color: #ffc0ec; color: #ffffff; }
+        .card { background-color: #ffffff; color: #000000; border-radius: 12px; }
+        .card-header { background: linear-gradient(135deg, #7722ff, #7209b7); color: white; }
+        .category-header { color: #7209b7; border-bottom: 2px solid #e0b0ff; padding-bottom: 4px; margin-top: 1.5rem; margin-bottom: 1rem; font-weight: bold; }
+        .qty-input { width: 65px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand fw-bold" href="#">El Yohan</a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="sku.html">SKU Generator</a>
+            <a class="nav-link active" href="index.html">Receipt Generator</a>
+        </div>
+    </nav>
+
+    <!--Container-->
+    <div class="container my-5 d-flex justify-content-center">
+        <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+            <div class="card-header text-center py-3 rounded">
+                <h4>OBMC Entrep Fair</h4>
+                <small class="fs-6">Drinks and Doohickeys</small>
+            </div>
+            <div class="card-body">
+                
+                <!--Drinks & Doohickeys-->
+                <h5 class="category-header">☕ Drinks & Doohickeys</h5>
+                
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="350" id="item1">
+                        <label class="form-check-label" for="item1">
+                            Americano + Jar of Pickles <span class="badge bg-secondary ms-1">₱350</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty1" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="1090" id="item2">
+                        <label class="form-check-label" for="item2">
+                            Spanish Latte + IPhone 12 Phone Case <span class="badge bg-secondary ms-1">₱1,090</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty2" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="10210" id="item3">
+                        <label class="form-check-label" for="item3">
+                            Cold Brew + Kodak PIXPRO FZ55 <span class="badge bg-secondary ms-1">₱10,210</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty3" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="375" id="item4">
+                        <label class="form-check-label" for="item4">
+                            Affogato + Biogesic (Pack of 20) <span class="badge bg-secondary ms-1">₱375</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty4" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="350" id="item5">
+                        <label class="form-check-label" for="item5">
+                            Caramel Macchiato + 50 PHP Load <span class="badge bg-secondary ms-1">₱350</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty5" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="2999" id="item6">
+                        <label class="form-check-label" for="item6">
+                            Dirty Matcha + Expired Library Card <span class="badge bg-secondary ms-1">₱2,999</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty6" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="3.50" id="item7">
+                        <label class="form-check-label" for="item7">
+                            Cafe Latte + The Will To Live <span class="badge bg-secondary ms-1">₱3.50</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty7" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="840" id="item8">
+                        <label class="form-check-label" for="item8">
+                            Strawberry Milkshake + Answer Key To Worksheet #1 <span class="badge bg-secondary ms-1">₱840</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty8" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="2500" id="item9">
+                        <label class="form-check-label" for="item9">
+                            Mocha + Tamagochi <span class="badge bg-secondary ms-1">₱2,500</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty9" value="1" min="1">
+                    </div>
+                </div>
+
+
+                <!--Side Dishes-->
+                <h5 class="category-header">🍟 Side Dishes</h5>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="75" id="item10">
+                        <label class="form-check-label" for="item10">
+                            Two Pencils <span class="badge bg-secondary ms-1">₱75</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty10" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="120" id="item11">
+                        <label class="form-check-label" for="item11">
+                            Borrowed Eraser <span class="badge bg-secondary ms-1">₱120</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty11" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="90" id="item12">
+                        <label class="form-check-label" for="item12">
+                            Half Eaten Sisig from Bistro <span class="badge bg-secondary ms-1">₱90</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty12" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="250" id="item13">
+                        <label class="form-check-label" for="item13">
+                            Unclaimed Water Bottle <span class="badge bg-secondary ms-1">₱250</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty13" value="1" min="1">
+                    </div>
+                </div>
+
+
+                <!--Premium Addons-->
+                <h5 class="category-header">⭐ Premium Add-Ons</h5>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="500" id="item14">
+                        <label class="form-check-label" for="item14">
+                            WiFi Password <span class="badge bg-secondary ms-1">₱500</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty14" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="2000" id="item15">
+                        <label class="form-check-label" for="item15">
+                            Teacher's Approval <span class="badge bg-secondary ms-1">₱2,000</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty15" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="7500" id="item16">
+                        <label class="form-check-label" for="item16">
+                            Extra 0.25 GWA <span class="badge bg-secondary ms-1">₱7,500</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty16" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="15000" id="item17">
+                        <label class="form-check-label" for="item17">
+                            Homework Extension <span class="badge bg-secondary ms-1">₱15,000</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty17" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="20000" id="item18">
+                        <label class="form-check-label" for="item18">
+                            "Can I Go Home Early?" Pass <span class="badge bg-secondary ms-1">₱20,000</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty18" value="1" min="1">
+                    </div>
+                </div>
+
+
+                <!--Special-->
+                <h5 class="category-header">🎁 Entrep Fair Specials</h5>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="500" id="item19">
+                        <label class="form-check-label" for="item19">
+                            ₱500 Mystery Box <small class="text-muted">(90% Chance you will regret this.)</small> <span class="badge bg-secondary ms-1">₱500</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty19" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="1000" id="item20">
+                        <label class="form-check-label" for="item20">
+                            Buy Nothing <span class="badge bg-secondary ms-1">₱1,000</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty20" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="50" id="item21">
+                        <label class="form-check-label" for="item21">
+                            Air <span class="badge bg-secondary ms-1">₱50</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty21" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="500" id="item22">
+                        <label class="form-check-label" for="item22">
+                            Premium Air <span class="badge bg-secondary ms-1">₱500</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty22" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="form-check me-2">
+                        <input class="form-check-input" type="checkbox" value="2999" id="item23">
+                        <label class="form-check-label" for="item23">
+                            Air (Pro Max) <span class="badge bg-secondary ms-1">₱2,999</span>
+                        </label>
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                        <small class="text-muted">Qty:</small>
+                        <input type="number" class="form-control form-control-sm qty-input" id="qty23" value="1" min="1">
+                    </div>
+                </div>
+
+                <!--Warning-->
+                <div class="alert alert-warning text-center fw-bold my-4 py-2 small" role="alert">
+                    ⚠️ ALL ITEMS ARE NON-REFUNDABLE. ESPECIALLY THE IPHONE 12 CASE.
+                </div>
+
+                <button class="btn btn-primary w-100 py-2 fw-bold" py-click="create_order">Create Order</button>
+
+                <div id="show" class="mt-4 text-center">
+                    <p class="text-muted">Your order summary will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PyScript Link-->
+    <script type="py" src="./main.py" config='{"packages": []}'></script>
+
+</body>
+</html>
